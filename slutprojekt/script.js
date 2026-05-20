@@ -11,7 +11,7 @@ window.location.href = "uppgraderingar.html";
 
 if (bmw) {
 bmw.addEventListener("click", function () {
-localStorage.setItem("bil", "BMW M4");
+localStorage.setItem("bil", "Bmw M4");
 window.location.href = "uppgraderingar.html";
 });
 }
