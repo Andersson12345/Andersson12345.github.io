@@ -1,0 +1,110 @@
+body {
+
+background-color: #0f172a;
+color: white;
+font-family: Arial;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.container {
+
+display: flex;
+gap: 20px;
+
+}
+
+.bil {
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+button {
+
+width: 250px;
+height: 60px;
+margin: 10px;
+background-color: #38bdf8;
+border: none;
+border-radius: 10px;
+
+}
+
+img {
+
+width: 250px;
+height: 150px;
+object-fit: contain;
+
+}
+@media (max-width: 768px) {
+
+.container {
+flex-direction: column;
+align-items: center;
+}
+
+img {
+width: 80%;
+height: auto;
+}
+
+}
+#backBtn {
+position: fixed;
+top: 10px;
+left: 10px;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: none;
+background-color: #38bdf8;
+cursor: pointer;
+font-size: 20px;
+}
+
+
+.pil {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #38bdf8;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#total {
+font-size: 30px;
+margin-top: 20px;
+}
+
+p {
+font-size: 22px;
+}
+
+h1 {
+margin-bottom: 30px;
+}
+
+#vagn {
+position: absolute;
+top: 20px;
+right: 20px;
+font-size: 30px;
+background: none;
+border: none;
+}
+

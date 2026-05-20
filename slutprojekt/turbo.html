@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>turbo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button id="vagn">🛒</button>
+
+<button id="tillbaka" class="pil">←</button>
+<h1>Välj turbo</h1>
+
+<div class="container">
+
+<div class="bil">
+<img id="turbo1" src="" alt="turbo" width="200">
+<p id="pris1"></p>
+</div>
+
+<div class="bil">
+<img id="turbo2" src="" alt="turbo" width="200">
+<p id="pris2"></p>
+</div>
+
+<div class="bil">
+<img id="turbo3" src="" alt="turbo" width="200">
+<p id="pris3"></p>
+</div>
+
+</div>
+
+<script>
+
+let bil = localStorage.getItem("bil");
+
+let turbo1 = document.getElementById("turbo1");
+let turbo2 = document.getElementById("turbo2");
+let turbo3 = document.getElementById("turbo3");
+
+let pris1 = document.getElementById("pris1");
+let pris2 = document.getElementById("pris2");
+let pris3 = document.getElementById("pris3");
+
+if (bil == "Mercedes GT63") {
+
+turbo1.src = "img/mercedes_turbo1.jpg";
+turbo2.src = "img/mercedes_turbo2.jpg";
+turbo3.src = "img/mercedes_turbo3.jpg";
+
+pris1.innerText = "18000 kr"; 
+pris2.innerText = "25000 kr";
+pris3.innerText = "40000 kr";
+
+}
+
+else if (bil == "BMW M4") {
+
+turbo1.src = "img/bmw_turbo1.jpg";
+turbo2.src = "img/bmw_turbo2.jpg";
+turbo3.src = "img/bmw_turbo3.jpg";
+
+pris1.innerText = "16000 kr";
+pris2.innerText = "28000 kr";
+pris3.innerText = "42000 kr";
+
+}
+
+else if (bil == "Audi RS6") {
+
+turbo1.src = "img/audi_turbo1.jpg";
+turbo2.src = "img/audi_turbo2.jpg";
+turbo3.src = "img/audi_turbo3.jpg";
+
+pris1.innerText = "19000 kr";
+pris2.innerText = "30000 kr";
+pris3.innerText = "45000 kr";
+
+}
+
+let tillbaka = document.getElementById("tillbaka");
+
+tillbaka.addEventListener("click", function () {
+    window.location.href = "uppgraderingar.html";
+});
+
+turbo1.addEventListener("click", function () {
+    localStorage.setItem("turbo", "turbo 1");
+
+    let gammaltPris = Number(localStorage.getItem("turboPris"));
+
+    if (bil == "Mercedes GT63") {
+        localStorage.setItem("turboPris", 18000);
+    }
+
+    else if (bil == "BMW M4") {
+        localStorage.setItem("turboPris", 16000);
+    }
+
+    else if (bil == "Audi RS6") {
+        localStorage.setItem("turboPris", 19000);
+    }
+});
+
+turbo2.addEventListener("click", function () {
+    localStorage.setItem("turbo", "turbo 2");
+
+    let gammaltPris = Number(localStorage.getItem("turboPris"));
+
+    if (bil == "Mercedes GT63") {
+        localStorage.setItem("turboPris", 25000);
+    }
+
+    else if (bil == "BMW M4") {
+        localStorage.setItem("turboPris", 28000);
+    }
+
+    else if (bil == "Audi RS6") {
+        localStorage.setItem("turboPris", 30000);
+    }
+});
+turbo3.addEventListener("click", function () {
+    localStorage.setItem("turbo", "turbo 3");
+
+    let gammaltPris = Number(localStorage.getItem("turboPris"));
+
+    if (bil == "Mercedes GT63") {
+        localStorage.setItem("turboPris", 40000);
+    }
+
+    else if (bil == "BMW M4") {
+        localStorage.setItem("turboPris", 42000);
+    }
+
+    else if (bil == "Audi RS6") {
+        localStorage.setItem("turboPris", 45000);
+    }
+});
+
+let vagn = document.getElementById("vagn");
+
+vagn.addEventListener("click", function () {
+    window.location.href = "vagn.html";
+});
+
+</script>
+
+</body>
+</html>

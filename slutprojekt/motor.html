@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button id="vagn">🛒</button>
+
+<button id="tillbaka" class="pil">←</button>
+<h1>Välj motor</h1>
+
+<div class="container">
+
+<div class="bil">
+<img id="motor1" src="" alt="motor" width="200">
+<p id="pris1"></p>
+</div>
+
+<div class="bil">
+<img id="motor2" src="" alt="motor" width="200">
+<p id="pris2"></p>
+</div>
+
+<div class="bil">
+<img id="motor3" src="" alt="motor" width="200">
+<p id="pris3"></p>
+</div>
+
+</div>
+
+<script>
+
+let bil = localStorage.getItem("bil");
+
+let motor1 = document.getElementById("motor1");
+let motor2 = document.getElementById("motor2");
+let motor3 = document.getElementById("motor3");
+
+let pris1 = document.getElementById("pris1");
+let pris2 = document.getElementById("pris2");
+let pris3 = document.getElementById("pris3");
+
+if (bil == "Mercedes GT63") {
+
+motor1.src = "img/mercedes_motor1.jpg";
+motor2.src = "img/mercedes_motor2.jpg";
+motor3.src = "img/mercedes_motor3.jpg";
+
+pris1.innerText = "50000 kr";
+pris2.innerText = "70000 kr";
+pris3.innerText = "90000 kr";
+
+}
+
+else if (bil == "BMW M4") {
+
+motor1.src = "img/bmw_motor1.jpg";
+motor2.src = "img/bmw_motor2.jpg";
+motor3.src = "img/bmw_motor3.jpg";
+
+pris1.innerText = "45000 kr";
+pris2.innerText = "65000 kr";
+pris3.innerText = "85000 kr";
+
+}
+
+else if (bil == "Audi RS6") {
+
+motor1.src = "img/audi_motor1.jpg";
+motor2.src = "img/audi_motor2.jpg";
+motor3.src = "img/audi_motor3.jpg";
+
+pris1.innerText = "48000 kr";
+pris2.innerText = "68000 kr";
+pris3.innerText = "88000 kr";
+
+}
+
+let tillbaka = document.getElementById("tillbaka");
+
+tillbaka.addEventListener("click", function () {
+    window.location.href = "uppgraderingar.html";
+});
+
+motor1.addEventListener("click", function () {
+    localStorage.setItem("motor", "motor 1");
+
+    let gammaltPris = Number(localStorage.getItem("motorPris"));
+
+    if (bil == "Mercedes GT63") {
+         localStorage.setItem("motorPris", 50000);
+    }
+
+    else if (bil == "BMW M4") {
+        localStorage.setItem("motorPris",  45000);
+    }
+
+    else if (bil == "Audi RS6") {
+         localStorage.setItem("motorPris", 48000);
+    }
+});
+
+motor2.addEventListener("click", function () {
+    localStorage.setItem("motor", "motor 2");
+
+    let gammaltPris = Number(localStorage.getItem("motorPris"));
+
+    if (bil == "Mercedes GT63") {
+        localStorage.setItem("motorPris", 70000);
+    }
+
+    else if (bil == "BMW M4") {
+         localStorage.setItem("motorPris", 65000);
+    }
+
+    else if (bil == "Audi RS6") {
+         localStorage.setItem("motorPris", 68000);
+    }
+});
+motor3.addEventListener("click", function () {
+    localStorage.setItem("motor", "motor 3");
+
+    let gammaltPris = Number(localStorage.getItem("motorPris"));
+
+    if (bil == "Mercedes GT63") {
+         localStorage.setItem("motorPris", 90000);
+    }
+
+    else if (bil == "BMW M4") {
+        localStorage.setItem("motorPris", 85000);
+    }
+
+    else if (bil == "Audi RS6") {
+         localStorage.setItem("motorPris", 88000);
+    }
+});
+
+let vagn = document.getElementById("vagn");
+
+vagn.addEventListener("click", function () {
+    window.location.href = "vagn.html";
+});
+
+</script>
+
+</body>
+</html>

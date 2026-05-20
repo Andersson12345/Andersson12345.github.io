@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppgraderingar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="vagn">🛒</button>
+
+<button id="tillbaka" class="pil">←</button>
+
+<h1>Välj uppgraderingar</h1>
+
+<p id="valdBil"></p>
+
+<div class="container">
+   
+    <img id="bilBild" src="img/bmw_m4.jpg" alt="Bil" width="200">
+
+   
+  <button id="motor">motor</button>
+
+ 
+  <button id="falgar">falgar</button>
+
+    
+  <button id="turbo">turbo</button>
+
+</div>
+
+<script>
+
+let bilBild = document.getElementById("bilBild");
+let bil = localStorage.getItem("bil");
+
+document.getElementById("valdBil").innerText ="Du valde: " + bil;
+
+if (bil == "Mercedes GT63") {
+    bilBild.src = "img/mercedes_gt63.jpg";
+}
+
+else if (bil == "BMW M4") {
+    bilBild.src = "img/bmw_m4.jpg";
+}
+
+else if (bil == "Audi RS6") {
+    bilBild.src = "img/audi_rs6.jpg";
+}
+
+
+let tillbaka = document.getElementById("tillbaka");
+
+tillbaka.addEventListener("click", function () {
+    window.location.href = "index.html";
+});
+
+
+let vagn = document.getElementById("vagn");
+
+vagn.addEventListener("click", function () {
+    window.location.href = "vagn.html";
+});
+
+
+
+document.getElementById("motor").addEventListener("click", function () {
+window.location.href = "motor.html";
+});
+
+document.getElementById("falgar").addEventListener("click", function () {
+window.location.href = "falgar.html";
+});
+
+document.getElementById("turbo").addEventListener("click", function () {
+window.location.href = "turbo.html";
+});
+
+
+</script>
+
+</body>
+</html>

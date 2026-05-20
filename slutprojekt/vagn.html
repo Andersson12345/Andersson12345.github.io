@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vagn</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<button id="tillbaka" class="pil">←</button>
+<h1>Din vagn</h1>
+
+<p id="motor"></p>
+<p id="motorPris"></p>
+
+<p id="falgar"></p>
+<p id="falgarPris"></p>
+
+<p id="turbo"></p>
+<p id="turboPris"></p>
+
+<p id="total"></p>
+
+<script>
+
+let motor = localStorage.getItem("motor");
+let motorPris = Number(localStorage.getItem("motorPris"));
+
+let falgar = localStorage.getItem("fälgar");
+let falgarPris = Number(localStorage.getItem("fälgarPris"));
+
+let turbo = localStorage.getItem("turbo");
+let turboPris = Number(localStorage.getItem("turboPris"));
+
+document.getElementById("motor").innerText = motor;
+document.getElementById("motorPris").innerText = motorPris + " kr";
+
+document.getElementById("falgar").innerText = falgar;
+document.getElementById("falgarPris").innerText = falgarPris + " kr";
+
+document.getElementById("turbo").innerText = turbo;
+document.getElementById("turboPris").innerText = turboPris + " kr";
+
+let total = motorPris + falgarPris + turboPris;
+
+document.getElementById("total").innerText =
+"Total: " + total + " kr";
+
+
+let tillbaka = document.getElementById("tillbaka");
+
+tillbaka.addEventListener("click", function () {
+    window.location.href = "uppgraderingar.html";
+});
+</script>
+
+</body>
+</html>
