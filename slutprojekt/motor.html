@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="description" content="Välj motor till din bil och bygg din drömbil">
+
 <title>Motor</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -57,7 +61,7 @@ pris3.innerText = "90000 kr";
 
 }
 
-else if (bil == "Bmw M4") {
+else if (bil == "BMW M4") {
 
 motor1.src = "img/bmw_motor1.jpg";
 motor2.src = "img/bmw_motor2.jpg";
@@ -81,69 +85,16 @@ pris3.innerText = "88000 kr";
 
 }
 
+
 let tillbaka = document.getElementById("tillbaka");
-
 tillbaka.addEventListener("click", function () {
-    window.location.href = "uppgraderingar.html";
+window.location.href = "uppgraderingar.html";
 });
 
-motor1.addEventListener("click", function () {
-    localStorage.setItem("motor", "motor 1");
-
-    let gammaltPris = Number(localStorage.getItem("motorPris"));
-
-    if (bil == "Mercedes GT63") {
-         localStorage.setItem("motorPris", 50000);
-    }
-
-    else if (bil == "Bmw M4") {
-        localStorage.setItem("motorPris",  45000);
-    }
-
-    else if (bil == "Audi RS6") {
-         localStorage.setItem("motorPris", 48000);
-    }
-});
-
-motor2.addEventListener("click", function () {
-    localStorage.setItem("motor", "motor 2");
-
-    let gammaltPris = Number(localStorage.getItem("motorPris"));
-
-    if (bil == "Mercedes GT63") {
-        localStorage.setItem("motorPris", 70000);
-    }
-
-    else if (bil == "Bmw M4") {
-         localStorage.setItem("motorPris", 65000);
-    }
-
-    else if (bil == "Audi RS6") {
-         localStorage.setItem("motorPris", 68000);
-    }
-});
-motor3.addEventListener("click", function () {
-    localStorage.setItem("motor", "motor 3");
-
-    let gammaltPris = Number(localStorage.getItem("motorPris"));
-
-    if (bil == "Mercedes GT63") {
-         localStorage.setItem("motorPris", 90000);
-    }
-
-    else if (bil == "Bmw M4") {
-        localStorage.setItem("motorPris", 85000);
-    }
-
-    else if (bil == "Audi RS6") {
-         localStorage.setItem("motorPris", 88000);
-    }
-});
 
 let vagn = document.getElementById("vagn");
-
 vagn.addEventListener("click", function () {
-    window.location.href = "vagn.html";
+window.location.href = "vagn.html";
 });
 
 </script>
