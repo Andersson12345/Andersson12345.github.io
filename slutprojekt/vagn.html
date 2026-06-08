@@ -1,14 +1,20 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="description" content="Din valda bil och alla uppgraderingar med totalpris">
+
 <title>Vagn</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
 <button id="tillbaka" class="pil">←</button>
+
 <h1>Din vagn</h1>
 
 <p id="motor"></p>
@@ -23,7 +29,6 @@
 <p id="total"></p>
 
 <script>
-    
 
 let motor = localStorage.getItem("motor");
 let motorPris = Number(localStorage.getItem("motorPris"));
@@ -54,6 +59,7 @@ let tillbaka = document.getElementById("tillbaka");
 tillbaka.addEventListener("click", function () {
     window.location.href = "uppgraderingar.html";
 });
+
 </script>
 
 </body>
